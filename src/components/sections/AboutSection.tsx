@@ -48,7 +48,7 @@ export function AboutSection({ showJourneyDetails = false }: AboutSectionProps) 
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-white pt-14 pb-16 sm:pt-18 sm:pb-20 border-t border-black/[0.04] scroll-mt-20"
+      className="relative overflow-hidden bg-white pt-14 pb-16 sm:pt-18 sm:pb-20 border-t border-black/[0.04] scroll-mt-24"
     >
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">

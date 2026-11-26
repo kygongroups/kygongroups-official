@@ -12,7 +12,7 @@ export function DivisionsSection() {
   return (
     <section
       id="divisions"
-      className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-20 sm:pb-24 border-t border-black/[0.04] scroll-mt-20"
+      className="relative overflow-hidden bg-white pt-16 pb-20 sm:pt-20 sm:pb-24 border-t border-black/[0.04] scroll-mt-24"
     >
       {/* Subtle decorative red corner waves matching Reference 3 */}
       <div

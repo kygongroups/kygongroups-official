@@ -43,15 +43,15 @@ export function Navbar() {
         className="origin-left h-[2.5px] w-full bg-gradient-to-r from-[#D90416] via-[#FF2A3B] to-[#D90416]"
       />
 
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 h-[78px] flex items-center justify-between gap-4">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 h-[88px] sm:h-[96px] flex items-center justify-between gap-4">
         {/* Original KYGON GROUPS Logo */}
         <button
           type="button"
           onClick={() => handleNavClick("/")}
-          className="flex items-center shrink-0 focus:outline-none cursor-pointer"
+          className="flex items-center shrink-0 focus:outline-none cursor-pointer py-1"
           aria-label="Kygon Groups Home"
         >
-          <KygonLogo className="h-12 sm:h-14 w-auto" />
+          <KygonLogo className="h-16 sm:h-20 lg:h-[84px] w-auto" />
         </button>
 
         {/* Desktop Navigation with sliding layoutId active pill */}

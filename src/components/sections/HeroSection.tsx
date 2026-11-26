@@ -37,7 +37,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={sectionRef}
-      className="relative overflow-hidden bg-white pt-8 pb-20 sm:pt-12 sm:pb-24 lg:pt-14 lg:pb-28 scroll-mt-20"
+      className="relative overflow-hidden bg-white pt-8 pb-20 sm:pt-12 sm:pb-24 lg:pt-14 lg:pb-28 scroll-mt-24"
     >
       {/* Soft pink bottom wave transition matching Reference 1 */}
       <div

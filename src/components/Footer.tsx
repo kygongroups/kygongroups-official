@@ -58,7 +58,7 @@ export function Footer() {
                 className="inline-block mb-4 cursor-pointer"
                 aria-label="Kygon Groups Home"
               >
-                <KygonLogo variant="footerBadge" className="h-11 sm:h-12 w-auto" />
+                <KygonLogo variant="footerBadge" className="h-14 sm:h-16 w-auto" />
               </button>
               <p className="text-[14px] leading-relaxed text-white/80 max-w-xs">
                 A technology and innovation group building intelligent products and digital
