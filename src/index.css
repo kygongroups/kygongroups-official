@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --kygon-red: #d90416;
+    --kygon-red-hover: #b80312;
+    --kygon-red-soft: #fdecec;
+    --kygon-black: #0a0a0d;
+    --kygon-charcoal: #141417;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+    color: #0a0a0d;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0a0a0d;
+    overflow-x: hidden;
+  }
+}
+
+.kygon-card {
+  background: #ffffff;
+  border: 1px solid rgba(10, 10, 13, 0.06);
+  box-shadow: 0 10px 30px rgba(10, 10, 13, 0.06);
+}
+
+.kygon-card-hover {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease;
+}
+
+.kygon-card-hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(217, 4, 22, 0.045) 48%,
+    transparent 75%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.kygon-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 44px rgba(217, 4, 22, 0.1),
+    0 8px 20px rgba(10, 10, 13, 0.06);
+  border-color: rgba(217, 4, 22, 0.25);
+}
+
+.kygon-card-hover:hover::after {
+  transform: translateX(120%);
+}
