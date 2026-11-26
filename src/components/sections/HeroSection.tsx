@@ -37,7 +37,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={sectionRef}
-      className="relative overflow-hidden bg-white pt-8 pb-20 sm:pt-12 sm:pb-24 lg:pt-14 lg:pb-28 scroll-mt-24"
+      className="relative overflow-hidden bg-white pt-6 pb-16 sm:pt-10 sm:pb-22 lg:pt-14 lg:pb-28 scroll-mt-24"
     >
       {/* Soft pink bottom wave transition matching Reference 1 */}
       <div
@@ -50,14 +50,14 @@ export function HeroSection() {
       />
 
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-6 items-center">
           {/* Left Copy */}
-          <motion.div style={{ y: copyY }} className="lg:col-span-6 space-y-6">
+          <motion.div style={{ y: copyY }} className="lg:col-span-6 space-y-5 sm:space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, ease: KYGON_EASE }}
-              className="inline-flex items-center gap-2.5 rounded-full bg-[#FDECEC] px-4 py-1.5 text-[13.5px] font-semibold text-[#D90416]"
+              className="inline-flex items-center gap-2.5 rounded-full bg-[#FDECEC] px-4 py-1.5 text-[13px] sm:text-[13.5px] font-semibold text-[#D90416]"
             >
               <PulsingDot />
               <span>Technology &amp; Innovation Group</span>
@@ -67,7 +67,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.08, ease: KYGON_EASE }}
-              className="text-[40px] sm:text-[52px] xl:text-[58px] font-extrabold tracking-tight leading-[1.07] text-[#0A0A0D]"
+              className="text-[36px] min-[400px]:text-[40px] sm:text-[48px] lg:text-[46px] xl:text-[58px] font-extrabold tracking-tight leading-[1.07] text-[#0A0A0D]"
             >
               Building Tomorrow’s{" "}
               <span className="text-[#D90416]">Technology</span>, Today.
@@ -77,7 +77,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.16, ease: KYGON_EASE }}
-              className="text-[17px] sm:text-[18.5px] leading-relaxed text-[#4B5563] max-w-[530px]"
+              className="text-[16px] sm:text-[18px] xl:text-[18.5px] leading-relaxed text-[#4B5563] max-w-[530px]"
             >
               We build intelligent software, AI-powered products, digital platforms and
               innovative solutions.
@@ -87,7 +87,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.24, ease: KYGON_EASE }}
-              className="flex flex-wrap items-center gap-4 pt-1"
+              className="flex flex-col items-start sm:flex-row sm:items-center gap-3.5 sm:gap-4 pt-1"
             >
               <motion.button
                 type="button"
@@ -114,8 +114,8 @@ export function HeroSection() {
               </motion.button>
             </motion.div>
 
-            {/* Staggered Category Strip */}
-            <div className="pt-6 flex flex-wrap items-center gap-y-4 gap-x-5">
+            {/* Categories: 2-column grid on mobile, 3-col on tablet, horizontal divider flow on desktop */}
+            <div className="pt-4 sm:pt-6 grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-wrap items-center gap-y-4 gap-x-4 sm:gap-x-5">
               {HOME_CATEGORIES.map((cat, idx) => {
                 const Icon = categoryIcons[cat.iconKey];
                 return (
@@ -131,7 +131,7 @@ export function HeroSection() {
                     whileHover={{ y: -2 }}
                     className={`group flex items-center gap-2.5 ${
                       idx < HOME_CATEGORIES.length - 1
-                        ? "sm:pr-5 sm:border-r sm:border-black/10"
+                        ? "lg:pr-5 lg:border-r lg:border-black/10"
                         : ""
                     }`}
                   >
@@ -139,7 +139,7 @@ export function HeroSection() {
                       className="w-5 h-5 text-[#D90416] shrink-0 transition-transform duration-200 group-hover:scale-110"
                       strokeWidth={2}
                     />
-                    <span className="text-[13px] font-semibold leading-tight text-[#111113] max-w-[105px]">
+                    <span className="text-[12.5px] sm:text-[13px] font-semibold leading-tight text-[#111113] max-w-[110px]">
                       {cat.label}
                     </span>
                   </motion.div>

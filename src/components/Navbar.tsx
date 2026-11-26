@@ -43,7 +43,7 @@ export function Navbar() {
         className="origin-left h-[2.5px] w-full bg-gradient-to-r from-[#D90416] via-[#FF2A3B] to-[#D90416]"
       />
 
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 h-[88px] sm:h-[96px] flex items-center justify-between gap-4">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 h-[82px] sm:h-[92px] lg:h-[96px] flex items-center justify-between gap-3 sm:gap-4">
         {/* Original KYGON GROUPS Logo */}
         <button
           type="button"
@@ -51,13 +51,13 @@ export function Navbar() {
           className="flex items-center shrink-0 focus:outline-none cursor-pointer py-1"
           aria-label="Kygon Groups Home"
         >
-          <KygonLogo className="h-16 sm:h-20 lg:h-[84px] w-auto" />
+          <KygonLogo className="h-14 min-[390px]:h-16 sm:h-20 lg:h-[76px] xl:h-[84px] w-auto" />
         </button>
 
         {/* Desktop Navigation with sliding layoutId active pill */}
         <nav
           aria-label="Primary Navigation"
-          className="hidden lg:flex items-center gap-1.5 xl:gap-2.5"
+          className="hidden lg:flex items-center gap-1 lg:gap-1.5 xl:gap-2.5"
         >
           {NAV_ITEMS.map((item) => {
             const section = getSectionFromPath(item.path);
@@ -68,7 +68,7 @@ export function Navbar() {
                 key={item.path}
                 type="button"
                 onClick={() => handleNavClick(item.path)}
-                className={`relative px-5 py-2 rounded-full text-[15px] font-semibold transition-colors duration-200 cursor-pointer ${
+                className={`relative px-4 xl:px-5 py-2 rounded-full text-[14.5px] xl:text-[15px] font-semibold transition-colors duration-200 cursor-pointer ${
                   isActive
                     ? "text-white"
                     : "text-[#0A0A0D] hover:text-[#D90416] hover:bg-[#FDECEC]/60"
